@@ -17,7 +17,7 @@ class profile_jira (
     mode    => '0700',
     owner   => 'root',
     group   => '0',
-    content => epp("profile_jira/${jira_backup}.epp", {
+    content => epp("profile_jira${jira_backup}.epp", {
         jira_home  => $jira_home,
         backup_dir => "${backup_dir}/jirahome",
         rotate     => $backups_max_qty,
